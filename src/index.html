@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic UI</title>
+  </head>
+  <body>
+    <h1>Dynamic UI showcase</h1>
+    <div id="main">
+      <div id="dropdownArea">
+        Drop-down menu
+        <button id="dropdownButton">
+          <img src="./dropdown_icon.svg" />
+          Menu
+        </button>
+        <div id="menuContent">
+          <a href="#">menu 1</a>
+          <a href="#">menu 2</a>
+          <a href="#">menu 3</a>
+        </div>
+      </div>
+    </div>
+    <div id="carouselContainer">
+      <button id="previousButton">Previous</button>
+      <div id="carouselFrame">
+        Image carousel frame
+        <div id="images">
+          <div class="imageContainer" id="cont_one">
+            <img class="catImg" id="img_cat_one" src="./cat1.jpg" alt="cat" />
+          </div>
+          <div class="imageContainer" id="cont_two">
+            <img class="catImg" id="img_cat_two" src="./cat2.jpg" alt="cat" />
+          </div>
+          <div class="imageContainer" id="cont_three">
+            <img class="catImg" id="img_cat_three" src="./cat3.jpg" alt="cat" />
+          </div>
+          <div class="imageContainer" id="cont_four">
+            <img class="catImg" id="img_cat_four" src="./cat4.jpg" alt="cat" />
+          </div>
+        </div>
+      </div>
+      <button id="nextButton">Next</button>
+    </div>
+  </body>
+</html>
