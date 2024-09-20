@@ -82,17 +82,13 @@ a:hover {
   margin-top: 2rem;
   border: 1px solid black;
   width: 168px;
-/*   display: flex;
-  flex-wrap: wrap; */
-  
+  position: relative;
   overflow-x: hidden;
 }
 
 #images {
     width: 1268px;
-    position: relative;
     display: flex;
-    /* flex: 1 0 auto; */
     flex-direction: row;
 }
 
