@@ -81,16 +81,23 @@ a:hover {
 #carouselFrame {
   margin-top: 2rem;
   border: 1px solid black;
+  padding: 1rem;
   width: 168px;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #images {
-    width: 1268px;
+    max-width: 1268px;
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
 }
+
+/* #images :nth-child(1) { order: 1; }
+#images :nth-child(2) { order: 2; }
+#images :nth-child(3) { order: 3; }
+#images :nth-child(4) { order: 4; } */
 
 .catImg {
     width: 168px;
