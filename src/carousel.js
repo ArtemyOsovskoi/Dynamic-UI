@@ -17,7 +17,19 @@ export function previous() {
   let previousButton = document.getElementById("previousButton");
 
   previousButton.addEventListener("click", () => {
-    let targetNode = getImageNodes[1];
+    if (firstImage.style.order == "1") {
+      fourthImage.style.order = '1';
+      firstImage.style.order = "4";
+    } else if (secondImage.style.order == "1") {
+      secondImage.style.order = "2";
+      firstImage.style.order = "1";
+    } else if (thirdImage.style.order == "1") {
+      thirdImage.style.order = "3";
+      secondImage.style.order = '1';
+    } else if (fourthImage.style.order == "1") {
+      thirdImage.style.order = '1';
+      fourthImage.style.order = '4';
+    }
   });
 }
 
