@@ -23,17 +23,17 @@ export function previous() {
 
   previousButton.addEventListener("click", () => {
     if (firstImage.style.order == "1") {
-      fourthImage.style.order = '1';
+      fourthImage.style.order = "1";
       firstImage.style.order = "4";
     } else if (secondImage.style.order == "1") {
       secondImage.style.order = "2";
       firstImage.style.order = "1";
     } else if (thirdImage.style.order == "1") {
       thirdImage.style.order = "3";
-      secondImage.style.order = '1';
+      secondImage.style.order = "1";
     } else if (fourthImage.style.order == "1") {
-      thirdImage.style.order = '1';
-      fourthImage.style.order = '4';
+      thirdImage.style.order = "1";
+      fourthImage.style.order = "4";
     }
   });
 }
@@ -44,23 +44,43 @@ export function next() {
     if (firstImage.style.order == "1") {
       firstImage.style.order = "2";
       secondImage.style.order = "1";
+
+      firstBullet.style.backgroundColor = "darkgrey";
+      secondBullet.style.backgroundColor = "black";
+      thirdBullet.style.backgroundColor = "darkgrey";
+      fourthBullet.style.backgroundColor = "darkgrey";
     } else if (secondImage.style.order == "1") {
       secondImage.style.order = "2";
       thirdImage.style.order = "1";
       firstImage.style.order = "3";
+
+      secondBullet.style.backgroundColor = "darkgrey";
+      firstBullet.style.backgroundColor = "darkgrey";
+      thirdBullet.style.backgroundColor = "black";
+      fourthBullet.style.backgroundColor = "darkgrey";
     } else if (thirdImage.style.order == "1") {
       thirdImage.style.order = "2";
       fourthImage.style.order = "1";
       secondImage.style.order = "4";
       firstImage.style.order = "3";
+
+      thirdBullet.style.backgroundColor = "darkgrey";
+      secondBullet.style.backgroundColor = "darkgrey";
+      firstBullet.style.backgroundColor = "darkgrey";
+      fourthBullet.style.backgroundColor = "black";
     } else if (fourthImage.style.order == "1") {
       firstImage.style.order = "1";
       secondImage.style.order = "2";
       thirdImage.style.order = "3";
       fourthImage.style.order = "4";
+
+      fourthBullet.style.backgroundColor = "darkgrey";
+      secondBullet.style.backgroundColor = "darkgrey";
+      thirdBullet.style.backgroundColor = "darkgrey";
+      firstBullet.style.backgroundColor = "black";
     }
   });
-};
+}
 
 export function bullets() {
   firstBullet.addEventListener("click", () => {
@@ -68,6 +88,11 @@ export function bullets() {
     secondImage.style.order = "2";
     thirdImage.style.order = "3";
     fourthImage.style.order = "4";
+
+    firstBullet.style.backgroundColor = "black";
+    secondBullet.style.backgroundColor = "darkgrey";
+    thirdBullet.style.backgroundColor = "darkgrey";
+    fourthBullet.style.backgroundColor = "darkgrey";
   });
 
   secondBullet.addEventListener("click", () => {
@@ -75,6 +100,11 @@ export function bullets() {
     firstImage.style.order = "2";
     thirdImage.style.order = "3";
     fourthImage.style.order = "4";
+
+    secondBullet.style.backgroundColor = "black";
+    firstBullet.style.backgroundColor = "darkgrey";
+    thirdBullet.style.backgroundColor = "darkgrey";
+    fourthBullet.style.backgroundColor = "darkgrey";
   });
 
   thirdBullet.addEventListener("click", () => {
@@ -82,6 +112,11 @@ export function bullets() {
     secondImage.style.order = "2";
     firstImage.style.order = "3";
     fourthImage.style.order = "4";
+
+    thirdBullet.style.backgroundColor = "black";
+    secondBullet.style.backgroundColor = "darkgrey";
+    firstBullet.style.backgroundColor = "darkgrey";
+    fourthBullet.style.backgroundColor = "darkgrey";
   });
 
   fourthBullet.addEventListener("click", () => {
@@ -89,7 +124,10 @@ export function bullets() {
     secondImage.style.order = "2";
     thirdImage.style.order = "3";
     firstImage.style.order = "4";
-  });
 
-  
-};
+    fourthBullet.style.backgroundColor = "black";
+    secondBullet.style.backgroundColor = "darkgrey";
+    thirdBullet.style.backgroundColor = "darkgrey";
+    firstBullet.style.backgroundColor = "darkgrey";
+  });
+}
