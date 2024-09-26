@@ -1,5 +1,5 @@
 let getImage = document.getElementById("images");
-let getImageNodes = getImage.childNodes;
+//let getImageNodes = getImage.childNodes;
 
 let firstImage = document.getElementById("cont_one");
 let secondImage = document.getElementById("cont_two");
@@ -9,6 +9,11 @@ firstImage.style.order = "1";
 secondImage.style.order = "2";
 thirdImage.style.order = "3";
 fourthImage.style.order = "4";
+
+let firstBullet = document.getElementById("bullet_one");
+let secondBullet = document.getElementById("bullet_two");
+let thirdBullet = document.getElementById("bullet_three");
+let fourthBullet = document.getElementById("bullet_four");
 
 console.log(getImage);
 console.log(getImage.childNodes);
@@ -55,4 +60,36 @@ export function next() {
       fourthImage.style.order = "4";
     }
   });
-}
+};
+
+export function bullets() {
+  firstBullet.addEventListener("click", () => {
+    firstImage.style.order = "1";
+    secondImage.style.order = "2";
+    thirdImage.style.order = "3";
+    fourthImage.style.order = "4";
+  });
+
+  secondBullet.addEventListener("click", () => {
+    secondImage.style.order = "1";
+    firstImage.style.order = "2";
+    thirdImage.style.order = "3";
+    fourthImage.style.order = "4";
+  });
+
+  thirdBullet.addEventListener("click", () => {
+    thirdImage.style.order = "1";
+    secondImage.style.order = "2";
+    firstImage.style.order = "3";
+    fourthImage.style.order = "4";
+  });
+
+  fourthBullet.addEventListener("click", () => {
+    fourthImage.style.order = "1";
+    secondImage.style.order = "2";
+    thirdImage.style.order = "3";
+    firstImage.style.order = "4";
+  });
+
+  
+};

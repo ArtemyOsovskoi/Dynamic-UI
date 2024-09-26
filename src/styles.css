@@ -80,8 +80,6 @@ a:hover {
 
 #carouselFrame {
   margin-top: 2rem;
-  border: 1px solid black;
-  padding: 1rem;
   width: 168px;
   position: relative;
   overflow: hidden;
@@ -94,12 +92,57 @@ a:hover {
     flex-direction: row; 
 }
 
-/* #images :nth-child(1) { order: 1; }
-#images :nth-child(2) { order: 2; }
-#images :nth-child(3) { order: 3; }
-#images :nth-child(4) { order: 4; } */
-
 .catImg {
     width: 168px;
     height: 268px;
+    border-radius: 20px;
+}
+
+#nextButton {
+  background-image: url(./next_arrow_icon.svg);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    font-size: 0;
+    line-height: 0;
+}
+
+#nextButton:hover {
+  cursor: pointer;
+}
+
+#previousButton {
+  background-image: url(./previous_arrow_icon.svg);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    font-size: 0;
+    line-height: 0;
+}
+
+#previousButton:hover {
+  cursor: pointer;
+}
+
+#nav_bullets {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 0.2rem;
+}
+
+.bullet{
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: .2;
+  cursor: pointer;
 }
